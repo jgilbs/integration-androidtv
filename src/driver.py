@@ -18,6 +18,7 @@ from ucapi.media_player import States as MediaState
 
 import config
 import media_player
+import remote
 import setup_flow
 import tv
 import voice_command
@@ -211,7 +212,7 @@ async def handle_android_tv_update(atv_id: str, update: dict[str, Any]) -> None:
             configured_entity,
             (
                 media_player.AndroidTVMediaPlayer,
-                # remote.AndroidTVRemote,
+                remote.AndroidTVRemote,
                 voice_command.VoiceCommand,
             ),
         ):
@@ -230,7 +231,7 @@ def _entities_from_device_id(device_id: str) -> list[str]:
     """
     return [
         f"{device_id}",  # media-player entity: keep the old identifier for backwards compatibility
-        # , f"remote.{device_id}"
+        f"remote.{device_id}",
         f"voice_assistant.{device_id}",
     ]
 
@@ -317,7 +318,7 @@ def _register_available_entities(device_config: config.AtvDevice, device: tv.And
     """
     entities: list[ucapi.Entity] = [
         media_player.AndroidTVMediaPlayer(device_config, device, profile),
-        # remote.AndroidTVRemote(device_config, device, profile),
+        remote.AndroidTVRemote(device_config, device, profile),
     ]
 
     # At startup, the device is not connected and is_voice_enabled is always None.

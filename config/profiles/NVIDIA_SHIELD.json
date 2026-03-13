@@ -24,10 +24,35 @@
     "stop"
   ],
   "simple_commands": [
+    "CURSOR_UP",
+    "CURSOR_DOWN",
+    "CURSOR_LEFT",
+    "CURSOR_RIGHT",
+    "CURSOR_ENTER",
     "APPS",
     "APP_SWITCHER"
   ],
   "command_map": {
+    "CURSOR_UP": {
+      "keycode": "DPAD_UP",
+      "action": "SHORT"
+    },
+    "CURSOR_DOWN": {
+      "keycode": "DPAD_DOWN",
+      "action": "SHORT"
+    },
+    "CURSOR_LEFT": {
+      "keycode": "DPAD_LEFT",
+      "action": "SHORT"
+    },
+    "CURSOR_RIGHT": {
+      "keycode": "DPAD_RIGHT",
+      "action": "SHORT"
+    },
+    "CURSOR_ENTER": {
+      "keycode": "DPAD_CENTER",
+      "action": "SHORT"
+    },
     "context_menu": {
       "keycode": "DPAD_CENTER",
       "action": "LONG"
