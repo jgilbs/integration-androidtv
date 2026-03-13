@@ -29,6 +29,11 @@
     "CURSOR_LEFT",
     "CURSOR_RIGHT",
     "CURSOR_ENTER",
+    "HOME",
+    "BACK",
+    "VOLUME_UP",
+    "VOLUME_DOWN",
+    "MUTE_TOGGLE",
     "APPS",
     "APP_SWITCHER"
   ],
@@ -51,6 +56,26 @@
     },
     "CURSOR_ENTER": {
       "keycode": "DPAD_CENTER",
+      "action": "SHORT"
+    },
+    "HOME": {
+      "keycode": "HOME",
+      "action": "SHORT"
+    },
+    "BACK": {
+      "keycode": "BACK",
+      "action": "SHORT"
+    },
+    "VOLUME_UP": {
+      "keycode": "VOLUME_UP",
+      "action": "SHORT"
+    },
+    "VOLUME_DOWN": {
+      "keycode": "VOLUME_DOWN",
+      "action": "SHORT"
+    },
+    "MUTE_TOGGLE": {
+      "keycode": "VOLUME_MUTE",
       "action": "SHORT"
     },
     "context_menu": {
